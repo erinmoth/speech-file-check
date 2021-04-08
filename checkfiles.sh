@@ -4,6 +4,7 @@ cd /data
 rm check.txt
 rm out.csv
 COUNTER=1
+echo "Checking files..."
 echo "0" >> out.csv
 for FILE in $(find -name \*.wav); do
     stats=$(sox "$FILE" -n stats 2>&1 |\
